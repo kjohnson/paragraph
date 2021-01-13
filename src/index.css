@@ -27,3 +27,19 @@
 .ce-paragraph p:last-of-type{
     margin-bottom: 0;
 }
+
+.codex-editor__redactor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ce-block {
+  flex: 0 0 100%; /* Set full width for non "column-ed" blocks. */
+}
+.ce-block.column {
+  flex: 1;
+  max-width: 325px; /* Set max-width to half of origional value so that combined width aligns */
+}
+.ce-block.column:not(:first-child) {
+  margin-left: 10px; /* Add a gutter between columns */
+}

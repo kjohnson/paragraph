@@ -43,3 +43,15 @@
 .ce-block.column:not(:first-child) {
   margin-left: 10px; /* Add a gutter between columns */
 }
+
+/**
+  * Add a placeholder to empty content editable divs
+  * @link https://stackoverflow.com/a/56704079
+  */
+[contentEditable=true][data-placeholder]:empty::before {
+  content: 'Start typing...';
+  position: absolute;
+  color: gray;
+  background-color: transparent;
+  opacity: 1 !important; /* Override editorjs */
+}
